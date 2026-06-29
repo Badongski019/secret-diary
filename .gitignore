@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+dist/
+dist-ssr/
+
+# Env
+.env
+.env.local
+.env.production
+
+# Misc
+.DS_Store
+*.log
+.firebase/

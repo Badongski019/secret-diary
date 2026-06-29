@@ -1,0 +1,18 @@
+// storage.rules
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Images: authenticated users can read, only admin can write/delete
+    match /images/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null
+        && request.auth.token.email == "admin@your-domain.com";
+    }
+    // Music: same rules
+    match /music/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null
+        && request.auth.token.email == "admin@your-domain.com";
+    }
+  }
+}
