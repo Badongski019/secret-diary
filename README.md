@@ -1,4 +1,4 @@
-# 💌 Secret Diary
+#  Secret Diary
 
 A beautiful, romantic web application where you can write, share, and cherish private letters. Built with React, Firebase, Tailwind CSS, and Framer Motion.
 
@@ -19,9 +19,9 @@ A beautiful, romantic web application where you can write, share, and cherish pr
 
 ---
 
-## 🚀 Quick Start
+ Quick Start
 
-### 1. Clone & install
+1. Clone & install
 
 ```bash
 git clone <your-repo>
@@ -29,7 +29,7 @@ cd secret-diary
 npm install
 ```
 
-### 2. Create a Firebase project
+2. Create a Firebase project
 
 1. Go to [Firebase Console](https://console.firebase.google.com) → **Add project**
 2. Enable **Authentication** → Sign-in method → **Email/Password**
@@ -37,7 +37,7 @@ npm install
 4. Enable **Storage** → Start in production mode
 5. Go to **Project Settings** → **Your apps** → **Web** → copy the config object
 
-### 3. Create Firebase users
+3. Create Firebase users
 
 In **Authentication → Users → Add user**, create TWO accounts:
 
@@ -46,7 +46,7 @@ In **Authentication → Users → Add user**, create TWO accounts:
 | Lover (shared) | `lover@your-domain.com` | something secure |
 | Admin | `admin@your-domain.com` | something very secure |
 
-### 4. Configure environment variables
+4. Configure environment variables
 
 ```bash
 cp .env.example .env
@@ -72,11 +72,11 @@ VITE_DEFAULT_MUSIC_URL=      # Optional: a Firebase Storage URL for homepage mus
 VITE_DEFAULT_MUSIC_TITLE=Our Song
 ```
 
-### 5. Update security rules
+5. Update security rules
 
 In `firestore.rules` and `storage.rules`, replace `admin@your-domain.com` with your actual admin email.
 
-### 6. Deploy Firestore & Storage rules
+6. Deploy Firestore & Storage rules
 
 ```bash
 npm install -g firebase-tools
@@ -85,7 +85,7 @@ firebase init firestore storage   # select your project, use existing files
 firebase deploy --only firestore:rules,storage:rules
 ```
 
-### 7. Run locally
+7. Run locally
 
 ```bash
 npm run dev
@@ -95,7 +95,7 @@ Open [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 📦 Deploy to Firebase Hosting
+ Deploy to Firebase Hosting
 
 ```bash
 npm run build
@@ -106,7 +106,7 @@ Your app will be live at `https://YOUR_PROJECT.web.app`
 
 ---
 
-## 🗂️ Project Structure
+Project Structure
 
 ```
 src/
@@ -142,7 +142,7 @@ src/
 
 ---
 
-## 🗄️ Firestore Schema
+Firestore Schema
 
 **Collection: `letters`**
 
@@ -159,7 +159,7 @@ src/
 
 ---
 
-## 🎨 Design System
+Design System
 
 | Token | Value | Use |
 |---|---|---|
@@ -175,7 +175,7 @@ src/
 
 ---
 
-## 🔒 Security Notes
+Security Notes
 
 - The callsign (`babuu`) is checked client-side. For production, it's fine for a private app, but don't use it to protect truly sensitive data.
 - Admin access is controlled by Firebase Authentication + Firestore rules — the admin email check is enforced server-side.
@@ -184,7 +184,7 @@ src/
 
 ---
 
-## 📱 Routes
+Routes
 
 | Route | Access | Description |
 |---|---|---|
@@ -193,7 +193,3 @@ src/
 | `/letter/:id` | Lover | Individual letter view |
 | `/admin/login` | Public | Admin credentials |
 | `/admin` | Admin only | CRUD dashboard |
-
----
-
-Made with 💗 — may every letter reach its heart.
